@@ -29,7 +29,7 @@ public class MainActivity extends ActionBarActivity {
 		adLayout = (FrameLayout) findViewById(R.id.ad_layout);
 
 		MagnetSDK.initialize(getApplicationContext());
-		MagnetSDK.getSettings().setTestMode(false);
+		MagnetSDK.getSettings().setTestMode(true);
 		
 		bannerAd = MagnetMobileBannerAd.create(getApplicationContext());
 		nativeAd = MagnetNativeExpress.create(getApplicationContext());
@@ -69,9 +69,9 @@ public class MainActivity extends ActionBarActivity {
 
 	public void loadRewardedAd(View view) {
 		// TODO Replace AdUnitId with yours
-		//bannerAd.load("b29f84df-da2f-4b2b-8027-0ece3dbdd26b", adLayout);
-		nativeAd.load("2f84c1f29e0408d5b305f98aad0e008e", adLayout, 300);
-		//rewardAd.load("6417590d4c7108d59003fcd758743791");
+		bannerAd.load("AdUnitId", adLayout);
+		//nativeAd.load("AdUnitId", adLayout, 300);
+		//rewardAd.load("AdUnitId");
 	}
 
 	public void showRewardedAd(View view) {
